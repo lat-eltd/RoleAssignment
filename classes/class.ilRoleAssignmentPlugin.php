@@ -26,7 +26,7 @@ include_once("./Services/LDAP/classes/class.ilLDAPPlugin.php");
 /**
  * This Plugin is not actually used to assign or deassign Roles,
  * but to check the courses' metadata keyword,
- * and add users whos 'departement' attribute (in the LDAP) matches this keyword to theese courses.
+ * and add users whose 'department' attribute (in the LDAP) matches this keyword to these courses.
  *
  * @author   Fabian Schmid <fs@studer-raimann.ch>
  * @author   Gabriel Comte <gc@studer-raimann.ch>
@@ -69,7 +69,7 @@ class ilRoleAssignmentPlugin extends ilLDAPPlugin implements ilLDAPRoleAssignmen
 		 * @var $ilLog ilLog
 		 */
 
-		//Only do something if the LDAP-Attribute 'departement' starts with 'Class_'
+		//Only do something if the LDAP-Attribute 'department' starts with 'Class_'
 		if (substr($a_user_data['department'], 0, 6) == self::LDAP_DEPARTEMENT_PREFIX) {
 
 			//get the courses ref_id
